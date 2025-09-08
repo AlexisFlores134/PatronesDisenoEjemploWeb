@@ -30,7 +30,7 @@ Simplifica el sistema complejo de verificación en una interfaz simple:
 
 1. Clona el repositorio:
 ```bash
-git clone 
+git clone https://github.com/AlexisFlores134/PatronesDisenoEjemploWeb.git
 2. Abre index.html en tu navegador
 
 3. Experimenta con los patrones:
