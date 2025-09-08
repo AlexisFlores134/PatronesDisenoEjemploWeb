@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Control de Acceso</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Sistema de Control de Acceso</h1>
+            <p class="subtitle">Implementación de patrones Decorator y Facade</p>
+        </header>
+
+        <div class="card">
+            <h2>Autenticación de Usuario</h2>
+            <div class="input-group">
+                <label for="userName">Nombre:</label>
+                <input type="text" id="userName" value="Ana García">
+            </div>
+            <div class="input-group">
+                <label for="userRole">Rol:</label>
+                <select id="userRole">
+                    <option value="usuario">Usuario</option>
+                    <option value="supervisor">Supervisor</option>
+                    <option value="administrador">Administrador</option>
+                </select>
+            </div>
+            <button id="auth-btn" class="btn primary">Autenticar Usuario</button>
+        </div>
+
+        <div class="card user-info">
+            <h2>Usuario Actual</h2>
+            <div id="user-desc">No autenticado</div>
+        </div>
+
+        <div class="card">
+            <h2>Patrón Decorator</h2>
+            <p>Añade funcionalidades adicionales dinámicamente</p>
+            <div class="button-group">
+                <button data-add="log" class="btn secondary">+ Registro</button>
+                <button data-add="temp" class="btn secondary">+ Temporal</button>
+                <button data-add="admin" class="btn secondary">+ Admin</button>
+            </div>
+            <button id="reset-btn" class="btn">Reiniciar</button>
+        </div>
+
+        <div class="card">
+            <h2>Patrón Facade</h2>
+            <p>Simplifica el proceso de verificación de acceso</p>
+            <div class="input-group">
+                <label for="cardId">ID de Tarjeta:</label>
+                <input type="text" id="cardId" placeholder="Ej: NFC-001, NFC-002, INVALID-001">
+            </div>
+            <div class="button-group">
+                <button id="facade-btn" class="btn primary">Verificar Acceso</button>
+                <button id="denied-btn" class="btn danger">Simular Acceso Denegado</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="log-header">
+                <h2>Registro de Actividad</h2>
+                <button id="clear-log" class="btn secondary">Limpiar Log</button>
+            </div>
+            <div class="log" id="log"></div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/decorator.js"></script>
+    <script src="js/facade.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
